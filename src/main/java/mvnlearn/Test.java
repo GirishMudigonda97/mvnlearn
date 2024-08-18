@@ -13,8 +13,11 @@ public class Test {
 //		 System.out.println(sc);
 		
 		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(MyConfig.class);
-		GirishCreds gc = (GirishCreds) ac.getBean("gir");
-		System.out.println(gc);
+//		GirishCreds gc = (GirishCreds) ac.getBean("gir");
+//		System.out.println(gc);
+		
+		Login log = (Login)ac.getBean("log");
+		System.out.println(log);
 		
 	}
 }

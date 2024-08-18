@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="repository" class="mvnlearn.Repository">
+    <property name="entity">
+    <value>Repository class</value>
+    </property>
+    </bean>
+    
+    <bean id="service" class="mvnlearn.Service">
+    <property name="userId">
+    <value>001</value>
+    </property>
+    
+    <property name="username">
+    <value>Girish</value>
+    </property>
+    
+       <property name="password">
+    <value>girish1234</value>
+    </property>		
+    
+         <property name="repository">
+		<ref bean="repository"/>
+    </property>	
+    </bean>
+
+</beans>
